@@ -34,7 +34,7 @@ const AppointmentForm = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       const { data } = await axios.get(
-        "/api/user/doctors",
+        "https://doctor-appointment-mern-znza.onrender.com/api/v1/user/doctors",
         { withCredentials: true }
       );
       setDoctors(data.doctors);
@@ -47,7 +47,7 @@ const AppointmentForm = () => {
     try {
       const hasVisitedBool = Boolean(hasVisited);
       const { data } = await axios.post(
-        "/api/appointment/post",
+        "https://doctor-appointment-mern-znza.onrender.com/api/v1/appointment/post",
         {
           firstName,
           lastName,

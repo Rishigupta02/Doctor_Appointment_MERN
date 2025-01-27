@@ -14,7 +14,7 @@ const MessageForm = () => {
     try {
       await axios
         .post(
-          "/api/message/send",
+          "https://doctor-appointment-mern-znza.onrender.com/api/v1/message/send",
           { firstName, lastName, email, phone, message },
           {
             withCredentials: true,
