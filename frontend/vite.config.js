@@ -8,7 +8,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:4000', // Base URL of your backend server
+        target: 'https://doctor-appointment-mern-znza.onrender.com', // Base URL of your backend server
         changeOrigin: true, // Ensures the host header matches the target
         rewrite: (path) => path.replace(/^\/api/, '/api/v1'), // Rewrites the path
       },
